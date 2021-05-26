@@ -156,7 +156,7 @@ include "conexion.php";
 
 										<div class="space-6"></div>
 										<p>
-											Ungresa tu correo electronico para recibir las instrucciones
+											Ingresa tu correo electronico para recibir las instrucciones
 										</p>
 
 										<form>
