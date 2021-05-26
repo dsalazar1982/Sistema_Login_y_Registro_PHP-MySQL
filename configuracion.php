@@ -1,6 +1,6 @@
 <?php
 
-$servidor = "10.0.0.51";
+$servidor = "10.0.1.51";
 $usuario = "dba_user";
 $clave = "dba_user@MariaDB2020*";
-$bd = "db_RegistroPHP1";
+$bd = "db_RegistroPHP";
