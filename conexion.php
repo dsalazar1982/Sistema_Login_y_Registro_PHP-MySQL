@@ -1,5 +1,7 @@
 <?php
 
+include("configuracion.php");
+
 $conexion = new mysqli($servidor, $usuario, $clave, $bd);
 
 if ($conexion->connect_error) {
