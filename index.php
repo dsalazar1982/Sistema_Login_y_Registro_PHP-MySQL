@@ -1,5 +1,14 @@
 <?php
 include "conexion.php";
+
+// Registrar usuario
+if(isset($_POST["registrar"])){
+$nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
+$correo = mysqli_real_escape_string($conexion, $_POST['correo']);
+$usuario = mysqli_real_escape_string($conexion, $_POST['user']);
+$password = mysqli_real_escape_string($conexion, $_POST['pass']);
+}
+
 ?>
 
 <!DOCTYPE html>
