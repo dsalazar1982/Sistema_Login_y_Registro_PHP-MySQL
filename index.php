@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include "conexion.php";
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +68,7 @@ include("conexion.php");
 
 										<div class="space-6"></div>
 
-										<form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST">
+										<form action="<?php $_SERVER["PHP_SELF"];?>" method="POST">
 											<fieldset>
 												<label class="block clearfix">
 													<span class="block input-icon input-icon-right">
@@ -195,7 +195,7 @@ include("conexion.php");
 										</h4>
 										<div class="space-6"></div>
 										<p>Ingresa los datos solicitados acontinuacion: </p>
-										<form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST">
+										<form action="<?php $_SERVER["PHP_SELF"];?>" method="POST">
 											<fieldset>
 												<label class="block clearfix">
 													<span class="block input-icon input-icon-right">

@@ -1,4 +1,4 @@
-<?
+<?php
 
 $servidor = '10.0.0.51';
 $usuario = 'dba_user1';

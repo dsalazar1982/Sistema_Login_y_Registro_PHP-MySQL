@@ -1,6 +1,6 @@
 <?php
 
-include("configuracion.php");
+include "configuracion.php";
 
 $conexion = new mysqli($servidor, $usuario, $clave, $bd);
 
