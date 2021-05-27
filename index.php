@@ -1,5 +1,11 @@
 <?php
 include "conexion.php";
+session_start();
+
+if (isset($_SESSION["id_usuario"])){
+	header("Location: admin.php");
+}
+
 
 // Login de usuarios
 if(!empty ($_POST)){
