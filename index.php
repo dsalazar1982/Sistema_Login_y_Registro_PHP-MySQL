@@ -2,13 +2,37 @@
 include "conexion.php";
 
 // Registrar usuario
-if(isset($_POST["registrar"])){
-$nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
-$correo = mysqli_real_escape_string($conexion, $_POST['correo']);
-$usuario = mysqli_real_escape_string($conexion, $_POST['user']);
-$password = mysqli_real_escape_string($conexion, $_POST['pass']);
+if (isset($_POST["registrar"])) {
+    $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
+    $correo = mysqli_real_escape_string($conexion, $_POST['correo']);
+    $usuario = mysqli_real_escape_string($conexion, $_POST['user']);
+    $password = mysqli_real_escape_string($conexion, $_POST['pass']);
+    $password_encriptada = sha1($password);
+    $sqluser = "SELECT id FROM t_usuarios WHERE usuario = '$usuario'";
+    $resultadouser = $conexion->query($sqluser);
+    $filas = $resultadouser->num_rows;
+    if ($filas > 0) {
+        echo "<script>
+			alert('El usuario ya existe');
+			windows.location = 'index.php';
+			</script>";
+    } else {
+		// Insertar informacion del usuario
+        $sqlusuario = "INSERT INTO t_usuarios (nombre, correo, clave) VALUES ('$nombre', '$correo', '$usuario', '$password_encriptada')";
+        $resultadousuario = $conexion->query($sqlusuario);
+		if ($resultadousuario > 0) {
+            echo "<script>
+				alert('Registro exitoso');
+				windows.location = 'index.php';
+				</script>";
+        } else {
+            echo "<script>
+		alert('Error en rgistro');
+		windows.location = 'index.php';
+		</script>";
+        }
+    }
 }
-
 ?>
 
 <!DOCTYPE html>
