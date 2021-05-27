@@ -1,6 +1,15 @@
 <?php
 include "conexion.php";
 
+// Login de usuarios
+if(!empty ($_POST)){
+
+
+}
+
+
+
+
 // Registrar usuario
 if (isset($_POST["registrar"])) {
     $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
@@ -33,6 +42,9 @@ if (isset($_POST["registrar"])) {
         }
     }
 }
+// Fin registrar usuario
+
+
 ?>
 
 <!DOCTYPE html>
@@ -105,14 +117,14 @@ if (isset($_POST["registrar"])) {
 											<fieldset>
 												<label class="block clearfix">
 													<span class="block input-icon input-icon-right">
-														<input type="text" class="form-control" name="user" placeholder="Usuario" />
+														<input type="text" class="form-control" name="user" placeholder="Usuario" required/>
 														<i class="ace-icon fa fa-user"></i>
 													</span>
 												</label>
 
 												<label class="block clearfix">
 													<span class="block input-icon input-icon-right">
-														<input type="password" name="pass" class="form-control" placeholder="Contraseña" />
+														<input type="password" name="pass" class="form-control" placeholder="Contraseña" required/>
 														<i class="ace-icon fa fa-lock"></i>
 													</span>
 												</label>
