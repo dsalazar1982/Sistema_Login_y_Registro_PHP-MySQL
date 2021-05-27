@@ -159,7 +159,7 @@ $row = $resultado -> fetch_assoc();
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="salir.php">
 										<i class="ace-icon fa fa-power-off"></i>
 										Salir
 									</a>
