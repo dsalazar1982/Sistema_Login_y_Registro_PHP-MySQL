@@ -3,11 +3,23 @@ include "conexion.php";
 
 // Login de usuarios
 if(!empty ($_POST)){
-
-
+	$usuario = mysqli_real_escape_string($conexion, $_POST['user']);
+    $password = mysqli_real_escape_string($conexion, $_POST['pass']);
+	$password_encriptada = sha1($password);
+	$sql = "SELECT id FROM t_usuarios WHERE usuario = '$usuario' AND passsword = '$password_encriptada'";
+	$resultado = $conexion -> query($sql);
+	$rows = $resultado -> num_rows;
+	if($rows > 0){
+		$row = $resultado -> fetch_assoc();
+		$_SESSION['id_usuario'] = $row["id"];
+		header("Location: admin.php");		
+	}else {
+		echo "<script>
+			alert('Usuario o Password Incorrecto');
+			windows.location = 'index.php';
+		</script>";
+	}
 }
-
-
 
 
 // Registrar usuario
