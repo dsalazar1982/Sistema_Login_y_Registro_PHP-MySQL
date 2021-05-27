@@ -18,7 +18,7 @@ if (isset($_POST["registrar"])) {
 			</script>";
     } else {
 		// Insertar informacion del usuario
-        $sqlusuario = "INSERT INTO t_usuarios (nombre, correo, clave) VALUES ('$nombre', '$correo', '$usuario', '$password_encriptada')";
+        $sqlusuario = "INSERT INTO t_usuarios (nombre, correo, usuario, password) VALUES ('$nombre', '$correo', '$usuario', '$password_encriptada')";
         $resultadousuario = $conexion->query($sqlusuario);
 		if ($resultadousuario > 0) {
             echo "<script>
