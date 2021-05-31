@@ -359,20 +359,20 @@ if (isset($_POST["registrar"])) {
 		if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 	</script>
 
-	<!-- inline scripts related to this page -->
+	<!-- Varios formularios en una unica pagina (Login, registro y recuperacion de password) -->
 	<script type="text/javascript">
-		/*jQuery(function($) {
+		jQuery(function($) {
 			$(document).on('click', '.toolbar a[data-target]', function(e) {
 				e.preventDefault();
 				var target = $(this).data('target');
-				$('.widget-box.visible').removeClass('visible'); //hide others
-				$(target).addClass('visible'); //show target
+				$('.widget-box.visible').removeClass('visible'); // Oculta los otros formularios
+				$(target).addClass('visible'); // Muestra el formulario activo
 			});
-		});*/
+		});
+		/* Fin varios formularios en una unica pagina (Login, registro y recuperacion de password) */
 
 
-
-		//you don't need this, just used for changing background
+		// Cambiar el fondo entre oscuro, azul y claro
 		jQuery(function($) {
 			$('#btn-login-dark').on('click', function(e) {
 				$('body').attr('class', 'login-layout');
@@ -397,6 +397,7 @@ if (isset($_POST["registrar"])) {
 			});
 
 		});
+		// Fin cambiar el fondo entre oscuro, azul y claro
 	</script>
 </body>
 
