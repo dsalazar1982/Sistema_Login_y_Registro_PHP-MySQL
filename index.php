@@ -365,7 +365,7 @@ if (isset($_POST["registrar"])) {
 			$(document).on('click', '.toolbar a[data-target]', function(e) {
 				e.preventDefault();
 				var target = $(this).data('target');
-				//$('.widget-box.visible').removeClass('visible'); //hide others
+				$('.widget-box.visible').removeClass('hide'); //hide others
 				$(target).addClass('visible'); //show target
 			});
 		});
