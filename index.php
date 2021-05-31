@@ -366,7 +366,7 @@ if (isset($_POST["registrar"])) {
 				e.preventDefault();
 				var target = $(this).data('target');
 				$('.widget-box.visible').removeClass('visible'); //hide others
-				$(target).addClass('hide'); //show target
+				$(target).addClass('visible'); //show target
 			});
 		});
 
