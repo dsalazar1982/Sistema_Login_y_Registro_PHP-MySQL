@@ -185,7 +185,7 @@ if (isset($_POST["registrar"])) {
 											</a>
 
 											<a href="https://www.instagram.com/jasingafi/" target="_blank" class="btn btn-danger">
-												<i class="ace-icon fa fa-linkedin"></i>
+												<i class="ace-icon fa fa-instagram"></i>
 											</a>
 										</div>
 									</div><!-- /.widget-main -->
