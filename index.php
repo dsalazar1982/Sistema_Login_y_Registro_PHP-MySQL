@@ -6,8 +6,7 @@ if (isset($_SESSION["id_usuario"])){
 	header("Location: admin.php");
 }
 
-
-// Login de usuarios
+## Login de usuarios
 //if(!empty ($_POST)){
 	if(isset($_POST["ingresar"])){
 	$usuario = mysqli_real_escape_string($conexion, $_POST['user']);
@@ -27,9 +26,9 @@ if (isset($_SESSION["id_usuario"])){
 		</script>";
 	}
 }
+## Fin login de usuarios
 
-
-// Registrar usuario
+## Registrar usuario
 if (isset($_POST["registrar"])) {
     $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
     $correo = mysqli_real_escape_string($conexion, $_POST['correo']);
@@ -39,13 +38,14 @@ if (isset($_POST["registrar"])) {
     $sqluser = "SELECT id FROM t_usuarios WHERE usuario = '$usuario'";
     $resultadouser = $conexion->query($sqluser);
     $filas = $resultadouser->num_rows;
-    if ($filas > 0) {
+    // Valida informacion del usuario
+	if ($filas > 0) {
         echo "<script>
 			alert('El usuario ya existe');
 			windows.location = 'index.php';
 			</script>";
     } else {
-		// Insertar informacion del usuario
+	// Inserta informacion del usuario
         $sqlusuario = "INSERT INTO t_usuarios (nombre, correo, usuario, password) VALUES ('$nombre', '$correo', '$usuario', '$password_encriptada')";
         $resultadousuario = $conexion->query($sqlusuario);
 		if ($resultadousuario > 0) {
@@ -61,9 +61,7 @@ if (isset($_POST["registrar"])) {
         }
     }
 }
-// Fin registrar usuario
-
-
+## Fin registrar usuario
 ?>
 
 <!DOCTYPE html>
@@ -187,7 +185,7 @@ if (isset($_POST["registrar"])) {
 											</a>
 
 											<a href="https://www.instagram.com/jasingafi/" target="_blank" class="btn btn-danger">
-												<i class="ace-icon fa fa-instagram"></i>
+												<i class="ace-icon fa fa-linkedin"></i>
 											</a>
 										</div>
 									</div><!-- /.widget-main -->
