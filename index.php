@@ -225,7 +225,7 @@ if (isset($_POST["registrar"])) {
 											<fieldset>
 												<label class="block clearfix">
 													<span class="block input-icon input-icon-right">
-														<input type="email" class="form-control" placeholder="Email" />
+														<input type="email" class="form-control" placeholder="E-mail" />
 														<i class="ace-icon fa fa-envelope"></i>
 													</span>
 												</label>
@@ -268,7 +268,7 @@ if (isset($_POST["registrar"])) {
 
 												<label class="block clearfix">
 													<span class="block input-icon input-icon-right">
-														<input type="email" class="form-control" name="correo" placeholder="Email" required />
+														<input type="email" class="form-control" name="correo" placeholder="E-mail" required />
 														<i class="ace-icon fa fa-envelope"></i>
 													</span>
 												</label>
