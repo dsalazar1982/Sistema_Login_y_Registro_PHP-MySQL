@@ -173,19 +173,19 @@ if (isset($_POST["registrar"])) {
 										<div class="space-6"></div>
 
 										<div class="social-login center">
-											<a href="http://bit.ly/SuscribirseIC" target="_blank" class="btn btn-danger">
+											<a href="https://www.youtube.com/channel/UC_nG2X1HuZh9RvfpCemRGrg" target="_blank" class="btn btn-danger">
 												<i class="ace-icon fa fa-youtube"></i>
 											</a>
-											<a href="https://www.facebook.com/impartiendoconocimiento" target="_blank" class="btn btn-primary">
+											<a href="https://www.facebook.com/profile.php?id=100057181603996" target="_blank" class="btn btn-primary">
 												<i class="ace-icon fa fa-facebook"></i>
 											</a>
 
-											<a href="https://twitter.com/jasingafi" target="_blank" class="btn btn-info">
+											<a href="https://twitter.com/dsalazar1982" target="_blank" class="btn btn-info">
 												<i class="ace-icon fa fa-twitter"></i>
 											</a>
 
-											<a href="https://www.instagram.com/jasingafi/" target="_blank" class="btn btn-danger">
-												<i class="ace-icon fa fa-instagram"></i>
+											<a href="https://www.linkedin.com/in/danielsalazarerazo/" target="_blank" class="btn btn-danger">
+												<i class="ace-icon fa fa-linkedin"></i>
 											</a>
 										</div>
 									</div><!-- /.widget-main -->
